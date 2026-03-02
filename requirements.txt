@@ -1,14 +1,13 @@
 # RunPod SDK
 runpod>=1.7.0
 
-# PyTorch (CUDA 12.1)
-torch>=2.1.0
-torchvision>=0.16.0
+# Note: PyTorch comes from base image (2.2.0 + CUDA 12.1)
+# Don't reinstall torch/torchvision - use base image versions
 
-# Diffusers and transformers
-diffusers>=0.27.0
-transformers>=4.36.0
-accelerate>=0.25.0
+# Diffusers and transformers (pinned for compatibility)
+diffusers==0.25.1
+transformers==4.36.2
+accelerate==0.25.0
 
 # Model loading
 safetensors>=0.4.0
@@ -21,7 +20,7 @@ Pillow>=10.0.0
 requests>=2.31.0
 
 # PEFT for LoRA support
-peft>=0.7.0
+peft==0.7.1
 
-# Memory optimization
-xformers>=0.0.23
+# Memory optimization (use version compatible with torch 2.2)
+xformers==0.0.24
